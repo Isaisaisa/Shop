@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Kategorie</th>
     <th>Beschreibung</th>
     <th>Preis</th>
     <th>Bild</th>
@@ -16,6 +17,7 @@
 <% @produkts.each do |produkt| %>
   <tr>
     <td><%= produkt.name %></td>
+    <td><%= produkt.kategorie %></td>
     <td><%= produkt.beschreibung %></td>
     <td><%= produkt.preis %></td>
     <td><%= produkt.bild %></td>

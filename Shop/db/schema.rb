@@ -11,23 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141111142015) do
-
-  create_table "autos", :force => true do |t|
-    t.string   "autokennzeichen"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  create_table "produktes", :force => true do |t|
-    t.string   "name"
-    t.decimal  "preis",      :precision => 8, :scale => 2
-    t.string   "kategorie"
-    t.datetime "gueltigVon"
-    t.datetime "gueltigBis"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
-  end
+ActiveRecord::Schema.define(:version => 20141111150141) do
 
   create_table "produkts", :force => true do |t|
     t.string   "name"
@@ -38,16 +22,7 @@ ActiveRecord::Schema.define(:version => 20141111142015) do
     t.date     "gueltigBis"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "vorname"
-    t.string   "nachname"
-    t.string   "email"
-    t.string   "adresse"
-    t.string   "telefonnummer"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "kategorie"
   end
 
 end
