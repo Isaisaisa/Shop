@@ -3,7 +3,7 @@ class ProduktsController < ApplicationController
   # GET /produkts.json
   def index
     @produkts = Produkt.all
-
+#if feld ist leer dann alle ausgeben if feld hat was stehen, dann nur das anzeigen was in feld steht
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @produkts }
@@ -79,5 +79,9 @@ class ProduktsController < ApplicationController
       format.html { redirect_to produkts_url }
       format.json { head :no_content }
     end
+  end
+  
+  def search
+    render text: params[:suchbegriff]
   end
 end

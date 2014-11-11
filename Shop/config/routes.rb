@@ -1,12 +1,10 @@
 Shop::Application.routes.draw do
   resources :produkts
 
-
-  resources :produktes
-
-
-  resources :users
-
+#  root 'produkts#index'
+  root :to => 'produkts#index'
+  
+  get 'search' => 'produkts#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

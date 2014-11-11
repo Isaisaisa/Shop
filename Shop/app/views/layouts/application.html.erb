@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Shop</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+   <title>Shop</title>
+   <%= stylesheet_link_tag    "application", :media => "all" %>
+   <%= javascript_include_tag "application" %>
+   <%= csrf_meta_tags %>
+   
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Browse the documentation</h3>
+            <ul class="links">
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
+              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
+              <br><br>
+              <%= form_tag(search_path, method: "get") do %>
+                <%= label_tag(:suchbegriff, "Suchen nach:") %>
+                <%= text_field_tag(:suchbegriff, '', size: 17)%>  
+                <%= submit_tag("Search") %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-<%= yield %>
+      <div id="content">
+        <div id="header">
+          <h1>Sofas</h1>
+        </div>
 
-</body>
+        <div id="getting-started">
+         <%= yield %>
+        </div>
+      </div>
+
+      <div id="footer">&nbsp;</div>
+    </div>
+      
+  </body>
 </html>

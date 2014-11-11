@@ -1,14 +1,15 @@
 <h1>Listing produkts</h1>
 
 <table>
+    
   <tr>
+    <th>Bild</th>
     <th>Name</th>
     <th>Kategorie</th>
     <th>Beschreibung</th>
     <th>Preis</th>
-    <th>Bild</th>
-    <th>Gueltigvon</th>
-    <th>Gueltigbis</th>
+    <%#*<th>Gueltigvon</th>%>
+    <%#*<th>Gueltigbis</th>%>
     <th></th>
     <th></th>
     <th></th>
@@ -16,13 +17,13 @@
 
 <% @produkts.each do |produkt| %>
   <tr>
+    <td><%= produkt.bild %></td>
     <td><%= produkt.name %></td>
     <td><%= produkt.kategorie %></td>
     <td><%= produkt.beschreibung %></td>
     <td><%= produkt.preis %></td>
-    <td><%= produkt.bild %></td>
-    <td><%= produkt.gueltigVon %></td>
-    <td><%= produkt.gueltigBis %></td>
+    <%#*<td><%= produkt.gueltigVon %></td>
+    <%#*<td><%= produkt.gueltigBis %></td>
     <td><%= link_to 'Show', produkt %></td>
     <td><%= link_to 'Edit', edit_produkt_path(produkt) %></td>
     <td><%= link_to 'Destroy', produkt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
