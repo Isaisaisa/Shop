@@ -1,0 +1,35 @@
+<h1>Listing produktes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Preis</th>
+    <th>Foto</th>
+    <th>Kategorie</th>
+    <th>Gueltigvon</th>
+    <th>Gueltigbis</th>
+    <th>Geladenam</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @produktes.each do |produkte| %>
+  <tr>
+    <td><%= produkte.name %></td>
+    <td><%= produkte.preis %></td>
+    <td><%= produkte.foto %></td>
+    <td><%= produkte.kategorie %></td>
+    <td><%= produkte.gueltigVon %></td>
+    <td><%= produkte.gueltigBis %></td>
+    <td><%= produkte.geladenAm %></td>
+    <td><%= link_to 'Show', produkte %></td>
+    <td><%= link_to 'Edit', edit_produkte_path(produkte) %></td>
+    <td><%= link_to 'Destroy', produkte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Produkte', new_produkte_path %>
