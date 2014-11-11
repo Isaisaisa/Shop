@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @produkt.name %>
+</p>
+
+<p>
+  <b>Beschreibung:</b>
+  <%= @produkt.beschreibung %>
+</p>
+
+<p>
+  <b>Preis:</b>
+  <%= @produkt.preis %>
+</p>
+
+<p>
+  <b>Bild:</b>
+  <%= @produkt.bild %>
+</p>
+
+<p>
+  <b>Gueltigvon:</b>
+  <%= @produkt.gueltigVon %>
+</p>
+
+<p>
+  <b>Gueltigbis:</b>
+  <%= @produkt.gueltigBis %>
+</p>
+
+
+<%= link_to 'Edit', edit_produkt_path(@produkt) %> |
+<%= link_to 'Back', produkts_path %>

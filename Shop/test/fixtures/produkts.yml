@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  beschreibung: MyString
+  preis: 1
+  bild: 
+  gueltigVon: 2014-11-11
+  gueltigBis: 2014-11-11
+
+two:
+  name: MyString
+  beschreibung: MyString
+  preis: 1
+  bild: 
+  gueltigVon: 2014-11-11
+  gueltigBis: 2014-11-11

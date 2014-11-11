@@ -1,4 +1,7 @@
 Shop::Application.routes.draw do
+  resources :produkts
+
+
   resources :produktes
 
 
