@@ -1,34 +1,30 @@
 <h1>Listing produkts</h1>
 
 <table>
-    
-  <tr>
-    <th>Bild</th>
-    <th>Name</th>
-    <th>Kategorie</th>
-    <th>Beschreibung</th>
-    <th>Preis</th>
-    <%#*<th>Gueltigvon</th>%>
-    <%#*<th>Gueltigbis</th>%>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @produkts.each do |produkt| %>
-  <tr>
-    <td><%= produkt.bild %></td>
-    <td><%= produkt.name %></td>
-    <td><%= produkt.kategorie %></td>
-    <td><%= produkt.beschreibung %></td>
-    <td><%= produkt.preis %></td>
-    <%#*<td><%= produkt.gueltigVon %></td>
-    <%#*<td><%= produkt.gueltigBis %></td>
-    <td><%= link_to 'Show', produkt %></td>
-    <td><%= link_to 'Edit', edit_produkt_path(produkt) %></td>
-    <td><%= link_to 'Destroy', produkt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+    <tr>
+        <th style="text-align: left;">Bild</th>
+        <th style="text-align: left;">Name</th>
+        <th style="text-align: left;">Kategorie</th>
+        <th style="text-align: left;">Beschreibung</th>
+        <th style="text-align: left;">Preis</th>
+        <th style="text-align: left;" colspan="3">Optionen</th>
+    </tr>
+
+    <% @produkts.each do |produkt| %>
+      <tr>
+          <td><%= produkt.bild %></td>
+          <td><%= produkt.name %></td>
+          <td><%= produkt.kategorie %></td>
+          <td><%= produkt.beschreibung %></td>
+          <td><%= produkt.preis %></td>
+  <%#*<td><%= produkt.gueltigVon %></td>
+  <%#*<td><%= produkt.gueltigBis %></td>
+          <td><%= link_to 'Show', produkt %></td>
+          <td><%= link_to 'Edit', edit_produkt_path(produkt) %></td>
+          <td><%= link_to 'Destroy', produkt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
 </table>
 
 <br />
