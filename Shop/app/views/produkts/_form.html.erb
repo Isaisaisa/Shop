@@ -33,11 +33,15 @@
   </div>
   <div class="field">
     <%= f.label :gueltigVon %><br />
-    <%= f.date_select :gueltigVon %>
+    <%= f.date_select :gueltigVon,
+                      :order => [:day, :month, :year],
+                      :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :gueltigBis %><br />
-    <%= f.date_select :gueltigBis %>
+    <%= f.date_select :gueltigBis,
+                      :order => [:day, :month, :year],
+                      :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

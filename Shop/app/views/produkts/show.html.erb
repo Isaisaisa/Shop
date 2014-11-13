@@ -1,9 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h3><%= @produkt.name %></h3>
 
-<p>
-  <b>Name:</b>
-  <%= @produkt.name %>
-</p>
+<p id="notice"><%= notice %></p>
 
 <p>
   <b>Kategorie:</b>
@@ -26,15 +23,14 @@
 </p>
 
 <p>
-  <b>Gueltigvon:</b>
+  <b>Gültig von:</b>
   <%= @produkt.gueltigVon %>
 </p>
 
 <p>
-  <b>Gueltigbis:</b>
+  <b>Gültig bis:</b>
   <%= @produkt.gueltigBis %>
 </p>
-
 
 <%= link_to 'Bearbeiten', edit_produkt_path(@produkt) %> |
 <%= link_to 'Zurück', produkts_path %>
