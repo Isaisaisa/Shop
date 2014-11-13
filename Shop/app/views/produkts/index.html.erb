@@ -1,32 +1,28 @@
-<h1>Listing produkts</h1>
+<h1>Unsere Produkte</h1>
 
-<table>
-
+<table id="product-list">
     <tr>
-        <th style="text-align: left;">Bild</th>
-        <th style="text-align: left;">Name</th>
-        <th style="text-align: left;">Kategorie</th>
-        <th style="text-align: left;">Beschreibung</th>
-        <th style="text-align: left;">Preis</th>
-        <th style="text-align: left;" colspan="3">Optionen</th>
+        <th>Bild</th>
+        <th>Name</th>
+        <th>Kategorie</th>
+        <th>Beschreibung</th>
+        <th style="text-align: right;">Preis</th>
+        <th colspan="2">Administration</th>
     </tr>
 
     <% @produkts.each do |produkt| %>
       <tr>
-          <td><%= produkt.bild %></td>
-          <td><%= produkt.name %></td>
+          <td><%= link_to produkt.bild, produkt %></td>
+          <td><%= link_to produkt.name, produkt %></td>
           <td><%= produkt.kategorie %></td>
           <td><%= produkt.beschreibung %></td>
-          <td><%= produkt.preis %></td>
-  <%#*<td><%= produkt.gueltigVon %></td>
-  <%#*<td><%= produkt.gueltigBis %></td>
-          <td><%= link_to 'Show', produkt %></td>
-          <td><%= link_to 'Edit', edit_produkt_path(produkt) %></td>
-          <td><%= link_to 'Destroy', produkt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td style="text-align: right;"><%= produkt.preis %> &euro;</td>
+          <td><%= link_to 'Bearbeiten', edit_produkt_path(produkt) %></td>
+          <td><%= link_to 'Löschen', produkt, method: :delete, data: { confirm: 'Bist Du Dir sicher, dass dieses Produkt gelöscht werden soll?' } %></td>
       </tr>
     <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Produkt', new_produkt_path %>
+<%= link_to 'Neues Produkt anlegen', new_produkt_path %>
