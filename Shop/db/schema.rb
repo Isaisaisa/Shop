@@ -9,23 +9,20 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended that you check this file into your version control system.
+# It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113101534) do
+ActiveRecord::Schema.define(:version => 20141111150141) do
 
-  create_table "produkts", force: true do |t|
+  create_table "produkts", :force => true do |t|
     t.string   "name"
-    t.string   "kategorie"
     t.string   "beschreibung"
     t.integer  "preis"
+    t.binary   "bild"
     t.date     "gueltigVon"
     t.date     "gueltigBis"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "bild_file_name"
-    t.string   "bild_content_type"
-    t.integer  "bild_file_size"
-    t.datetime "bild_updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "kategorie"
   end
 
 end
