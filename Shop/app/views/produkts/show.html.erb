@@ -1,6 +1,14 @@
-<h3><%= @produkt.name %></h3>
-
 <p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @produkt.name %>
+</p>
+
+<p>
+  <b>Preis:</b>
+  <%= @produkt.preis %>
+</p>
 
 <p>
   <b>Kategorie:</b>
@@ -13,24 +21,15 @@
 </p>
 
 <p>
-  <b>Preis:</b>
-  <%= @produkt.preis %>
-</p>
-
-<p>
-  <b>Bild:</b>
-  <%= @produkt.bild %>
-</p>
-
-<p>
-  <b>Gültig von:</b>
-  <%= @produkt.gueltigVon %>
-</p>
-
-<p>
-  <b>Gültig bis:</b>
+  <b>Gueltigbis:</b>
   <%= @produkt.gueltigBis %>
 </p>
 
-<%= link_to 'Bearbeiten', edit_produkt_path(@produkt) %> |
-<%= link_to 'Zurück', produkts_path %>
+<p>
+  <b>Gueltigvon:</b>
+  <%= @produkt.gueltigVon %>
+</p>
+
+
+<%= link_to 'Edit', edit_produkt_path(@produkt) %> |
+<%= link_to 'Back', produkts_path %>

@@ -3,7 +3,7 @@ class ProduktsController < ApplicationController
   # GET /produkts.json
   def index
     @produkts = Produkt.all
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @produkts }
@@ -44,7 +44,7 @@ class ProduktsController < ApplicationController
 
     respond_to do |format|
       if @produkt.save
-        format.html { redirect_to @produkt, notice: 'Produkt wurde erfolgreich erstellt.' }
+        format.html { redirect_to @produkt, notice: 'Produkt was successfully created.' }
         format.json { render json: @produkt, status: :created, location: @produkt }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class ProduktsController < ApplicationController
 
     respond_to do |format|
       if @produkt.update_attributes(params[:produkt])
-        format.html { redirect_to @produkt, notice: 'Produkt wurde erfolgreich aktualisiert.' }
+        format.html { redirect_to @produkt, notice: 'Produkt was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -79,10 +79,5 @@ class ProduktsController < ApplicationController
       format.html { redirect_to produkts_url }
       format.json { head :no_content }
     end
-  end
-  
-  def search
-    @produkts = Produkt.search(params[:suchbegriff])
-     render "index"
   end
 end

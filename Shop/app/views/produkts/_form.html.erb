@@ -1,7 +1,7 @@
 <%= form_for(@produkt) do |f| %>
   <% if @produkt.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@produkt.errors.count, "Fehler") %> prohibited this produkt from being saved:</h2>
+      <h2><%= pluralize(@produkt.errors.count, "error") %> prohibited this produkt from being saved:</h2>
 
       <ul>
       <% @produkt.errors.full_messages.each do |msg| %>
@@ -15,33 +15,25 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
- <div class="field">
-    <%= f.label :kategorie %><br />
-    <%= f.text_field :kategorie %>
-  </div>
-  <div class="field">
-    <%= f.label :beschreibung %><br />
-    <%= f.text_field :beschreibung %>
-  </div>
   <div class="field">
     <%= f.label :preis %><br />
     <%= f.number_field :preis %>
   </div>
   <div class="field">
-    <%= f.label :bild %><br />
-    <%= f.text_field :bild %>
+    <%= f.label :kategorie %><br />
+    <%= f.text_field :kategorie %>
   </div>
   <div class="field">
-    <%= f.label :gueltigVon %><br />
-    <%= f.date_select :gueltigVon,
-                      :order => [:day, :month, :year],
-                      :include_blank => true %>
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :beschreibung %>
   </div>
   <div class="field">
     <%= f.label :gueltigBis %><br />
-    <%= f.date_select :gueltigBis,
-                      :order => [:day, :month, :year],
-                      :include_blank => true %>
+    <%= f.date_select :gueltigBis %>
+  </div>
+  <div class="field">
+    <%= f.label :gueltigVon %><br />
+    <%= f.date_select :gueltigVon %>
   </div>
   <div class="actions">
     <%= f.submit %>

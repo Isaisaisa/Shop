@@ -2,16 +2,16 @@
 
 one:
   name: MyString
-  beschreibung: MyString
   preis: 1
-  bild: 
-  gueltigVon: 2014-11-11
-  gueltigBis: 2014-11-11
+  kategorie: MyString
+  beschreibung: MyText
+  gueltigBis: 2014-11-13
+  gueltigVon: 2014-11-13
 
 two:
   name: MyString
-  beschreibung: MyString
   preis: 1
-  bild: 
-  gueltigVon: 2014-11-11
-  gueltigBis: 2014-11-11
+  kategorie: MyString
+  beschreibung: MyText
+  gueltigBis: 2014-11-13
+  gueltigVon: 2014-11-13
