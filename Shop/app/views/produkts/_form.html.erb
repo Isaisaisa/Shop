@@ -28,12 +28,16 @@
     <%= f.text_area :beschreibung %>
   </div>
   <div class="field">
-    <%= f.label :gueltigBis %><br />
-    <%= f.date_select :gueltigBis %>
+
+    <%= f.label :gueltigVon %><br />
+    <%= f.date_select :gueltigVon,
+                      :include_blank => true %>
   </div>
   <div class="field">
-    <%= f.label :gueltigVon %><br />
-    <%= f.date_select :gueltigVon %>
+    <%= f.label :gueltigBis %><br />
+    <%= f.date_select :gueltigBis,
+                      :include_blank => true %>
+
   </div>
   <div class="actions">
     <%= f.submit %>

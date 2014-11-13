@@ -16,19 +16,24 @@
 </p>
 
 <p>
+
   <b>Beschreibung:</b>
   <%= @produkt.beschreibung %>
 </p>
 
 <p>
-  <b>Gueltigbis:</b>
-  <%= @produkt.gueltigBis %>
+
+  <b>Gültig von:</b>
+  <%= l(@produkt.gueltigVon) %>
 </p>
 
 <p>
-  <b>Gueltigvon:</b>
-  <%= @produkt.gueltigVon %>
+  <b>Gültig bis:</b>
+  <%= l(@produkt.gueltigBis) %>
+
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_produkt_path(@produkt) %> |
