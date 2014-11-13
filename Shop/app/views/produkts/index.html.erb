@@ -1,33 +1,25 @@
-<h1>Listing produkts</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Preis</th>
-    <th>Kategorie</th>
-    <th>Beschreibung</th>
-    <th>Gueltigbis</th>
-    <th>Gueltigvon</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Unsere Produkte</h1>
+<table id="product-list">
+    <tr>
+        <th>Name</th>
+        <th>Kategorie</th>
+        <th>Beschreibung</th>
+        <th style="text-align: right;">Preis</th>
+        <th colspan="2">Administration</th>
+    </tr>
 
 <% @produkts.each do |produkt| %>
-  <tr>
-    <td><%= produkt.name %></td>
-    <td><%= produkt.preis %></td>
-    <td><%= produkt.kategorie %></td>
-    <td><%= produkt.beschreibung %></td>
-    <td><%= produkt.gueltigBis %></td>
-    <td><%= produkt.gueltigVon %></td>
-    <td><%= link_to 'Show', produkt %></td>
-    <td><%= link_to 'Edit', edit_produkt_path(produkt) %></td>
-    <td><%= link_to 'Destroy', produkt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+      <tr>
+          <td><%= link_to produkt.name, produkt %></td>
+          <td><%= produkt.kategorie %></td>
+          <td><%= produkt.beschreibung %></td>
+          <td style="text-align: right;"><%= produkt.preis %> &euro;</td>
+          <td><%= link_to 'Bearbeiten', edit_produkt_path(produkt) %></td>
+          <td><%= link_to 'Löschen', produkt, method: :delete, data: { confirm: 'Bist Du Dir sicher, dass dieses Produkt gelöscht werden soll?' } %></td>
+      </tr>
+    <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Produkt', new_produkt_path %>
+<%= link_to 'Neues Produkt anlegen', new_produkt_path %>
