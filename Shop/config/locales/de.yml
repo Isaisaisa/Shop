@@ -138,6 +138,7 @@ de:
       create: ! '%{model} erstellen'
       submit: ! '%{model} speichern'
       update: ! '%{model} aktualisieren'
+      search: 'Los'
   number:
     currency:
       format:
