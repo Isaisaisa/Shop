@@ -24,12 +24,12 @@
 
 <p>
   <b>Gültig von:</b>
-  <%= @produkt.gueltigVon %>
+  <%= l(@produkt.gueltigVon) %>
 </p>
 
 <p>
   <b>Gültig bis:</b>
-  <%= @produkt.gueltigBis %>
+  <%= l(@produkt.gueltigBis) %>
 </p>
 
 <%= link_to 'Bearbeiten', edit_produkt_path(@produkt) %> |
