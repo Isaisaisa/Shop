@@ -4,7 +4,7 @@ class Produkt < ActiveRecord::Base
  
   
   def self.search(query)
-    where("name LIKE (?)", "%#{query}%")
+    where("name LIKE (?) OR kategorie LIKE (?)", "%#{query}%", "%#{query}%")
   end
   
 end

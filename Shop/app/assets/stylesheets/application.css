@@ -26,6 +26,16 @@ h1 {
     color: #000;
 }
 
+h2 {
+    font-size: 22px;
+    color: #000;
+}
+
+h3 {
+    font-size: 16px;
+    color: #000;
+}
+
 a  {color: #03c}
 a:hover {
     background-color: #03c;
@@ -33,128 +43,42 @@ a:hover {
     text-decoration: none;
 }
 
-
 #page {
-    background-color: #f0f0f0;
     width: 1200px;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 15px auto 0 auto;
+    background-color: #f0f0f0;
+    border: 2px solid #666;
 }
 
 #content {
+    background-color: #fff;
     float: left;
-    background-color: white;
-    border: 3px solid #aaa;
-    border-top: none;
-    padding: 125px;
-    width: 700px;
+    padding: 5px 15px 15px 15px;
+    width: 900px;
+    border-right: 1px solid #666;
 }
 
 #sidebar {
     float: right;
-    width: 225px;
+    width: 250px;
 }
 
 #footer {
+    text-align: center;
+    border-top: 1px solid #666;
     clear: both;
+    font-style: italic;
 }
-
-#header, #about, #getting-started {
-    padding-left: 75px;
-    padding-right: 30px;
-}
-
 
 #header {
-    background-image: url("assets/rails.png");
-    background-repeat: no-repeat;
-    background-position: top left;
-    height: 64px;
+    border-bottom: 1px solid #666;
+    height: 305px;
 }
 #header h1, #header h2 {margin: 0}
 #header h2 {
     color: #888;
     font-weight: normal;
     font-size: 16px;
-}
-
-
-#about h3 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-#about-content {
-    background-color: #ffd;
-    border: 1px solid #fc0;
-    margin-left: -55px;
-    margin-right: -10px;
-}
-#about-content table {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 11px;
-    border-collapse: collapse;
-}
-#about-content td {
-    padding: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-#about-content td.name  {color: #555}
-#about-content td.value {color: #000}
-
-#about-content ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-#about-content.failure {
-    background-color: #fcc;
-    border: 1px solid #f00;
-}
-#about-content.failure p {
-    margin: 0;
-    padding: 10px;
-}
-
-
-#getting-started {
-    border-top: 1px solid #ccc;
-    margin-top: 25px;
-    padding-top: 15px;
-}
-#getting-started h1 {
-    margin: 0;
-    font-size: 20px;
-}
-#getting-started h2 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: normal;
-    color: #333;
-    margin-bottom: 25px;
-}
-#getting-started ol {
-    margin-left: 0;
-    padding-left: 0;
-}
-#getting-started li {
-    font-size: 18px;
-    color: #888;
-    margin-bottom: 25px;
-}
-#getting-started li h2 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 18px;
-    color: #333;
-}
-#getting-started li p {
-    color: #555;
-    font-size: 13px;
 }
 
 #sidebar ul {
