@@ -22,5 +22,15 @@
   <%= @produkt.bild %>
 </p>
 
+<p>
+  <b>Gültig von:</b>
+  <%= @produkt.gueltigVon %>
+</p>
+
+<p>
+  <b>Gültig bis:</b>
+  <%= @produkt.gueltigBis %>
+</p>
+
 <%= link_to 'Bearbeiten', edit_produkt_path(@produkt) %> |
 <%= link_to 'Zurück', produkts_path %>
