@@ -1,40 +1,36 @@
-<h3><%= @produkt.name %></h3>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <strong>Name:</strong>
   <%= @produkt.name %>
 </p>
 
 <p>
-  <b>Preis:</b>
-  <%= @produkt.preis %>
-</p>
-
-<p>
-  <b>Kategorie:</b>
+  <strong>Kategorie:</strong>
   <%= @produkt.kategorie %>
 </p>
 
 <p>
-
-  <b>Beschreibung:</b>
+  <strong>Beschreibung:</strong>
   <%= @produkt.beschreibung %>
 </p>
 
 <p>
-
-  <b>Gültig von:</b>
-  <%= l(@produkt.gueltigVon) %>
+  <strong>Preis:</strong>
+  <%= @produkt.preis %>
 </p>
 
 <p>
-  <b>Gültig bis:</b>
-  <%= l(@produkt.gueltigBis) %>
-
+  <strong>Gueltigvon:</strong>
+  <%= @produkt.gueltigVon %>
 </p>
 
+<p>
+  <strong>Gueltigbis:</strong>
+  <%= @produkt.gueltigBis %>
+</p>
 
+<%= image_tag @produkt.bild.url(:medium) %>
 
-<%= link_to 'Bearbeiten', edit_produkt_path(@produkt) %> |
-<%= link_to 'Zurück', produkts_path %>
+<%= link_to 'Edit', edit_produkt_path(@produkt) %> |
+<%= link_to 'Back', produkts_path %>
