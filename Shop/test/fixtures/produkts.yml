@@ -1,17 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   name: MyString
-  preis: 1
   kategorie: MyString
-  beschreibung: MyText
-  gueltigBis: 2014-11-13
+  beschreibung: MyString
+  preis: 1
   gueltigVon: 2014-11-13
+  gueltigBis: 2014-11-13
 
 two:
   name: MyString
-  preis: 1
   kategorie: MyString
-  beschreibung: MyText
-  gueltigBis: 2014-11-13
+  beschreibung: MyString
+  preis: 1
   gueltigVon: 2014-11-13
+  gueltigBis: 2014-11-13
